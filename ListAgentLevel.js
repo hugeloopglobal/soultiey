@@ -1,5 +1,6 @@
- const users = [
-      { username: 'mayawilianti', password: '890324145140', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
+
+    const users = [
+      { username: 'mayawilianti', password: '5140', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
       { username: 'zarinarusli', password: 'vip456', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
       { username: 'sitihajar', password: 'agent123', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
       { username: 'agentleader', password: 'agent456', level: 'AGENT', link: 'https://onpay.my/agent-order' },
@@ -23,7 +24,7 @@
 
         // Force buka link tab baru (bypass sandbox)
         setTimeout(() => {
-          window.open(validUser.link, "_blank");
+          window.open(validUser.link, "validUser.link");
         }, 500);
 
       } else {
@@ -31,3 +32,4 @@
         errorMsg.textContent = 'Username / Password Invalid!';
       }
     });
+ 
