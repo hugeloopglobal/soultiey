@@ -22,11 +22,10 @@ const users = [
         errorMsg.textContent = `Login berjaya sebagai ${validUser.level}! Sedang redirect...`;
 
         // Redirect selepas 1 saat
-        setTimeout(() => {
-          window.location.href = validUser.link;
-        }, 1000);
-
-      } else {
+          setTimeout(() => {
+    window.open(validUser.link, "_blank"); // Buka tab baru (confirm jalan)
+  }, 1000);
+} else {
         errorMsg.style.color = 'red';
         errorMsg.textContent = 'Username / Password Invalid!';
       }
