@@ -1,11 +1,3 @@
-const users = [
-      { username: 'mayawilianti', password: '890324145140', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
-      { username: 'zarinarusli', password: 'vip456', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
-      { username: 'sitihajar', password: 'agent123', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
-      { username: 'agentleader', password: 'agent456', level: 'AGENT', link: 'https://onpay.my/agent-order' },
-      { username: 'customer1', password: 'cust123', level: 'CUSTOMER', link: 'https://onpay.my/customer-order' },
-      { username: 'customer2', password: 'cust456', level: 'CUSTOMER', link: 'https://onpay.my/customer-order' }
-    ];
 
     const form = document.getElementById('loginForm');
     const errorMsg = document.getElementById('errorMsg');
