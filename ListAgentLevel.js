@@ -1,5 +1,4 @@
-<script>
-  const users = [
+const users = [
     {
       username: 'mayawilianti',
       password: '5140',
@@ -57,4 +56,3 @@
       }
     });
   });
-</script>
