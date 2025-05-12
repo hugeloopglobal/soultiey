@@ -46,18 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
       errorMsg.style.color = 'green';
       errorMsg.textContent = `Login berjaya sebagai ${validUser.level}! Redirecting...`;
 
-      // Bina OnPay Link dengan auto prefill
-      const name = encodeURIComponent(validUser.customer_name);
-      const phone = encodeURIComponent(validUser.customer_phone);
-      const email = encodeURIComponent(validUser.customer_email);
+  // Auto build link with query string
+const name = encodeURIComponent(validUser.customer_name);
+const phone = encodeURIComponent(validUser.customer_phone);
+const email = encodeURIComponent(validUser.customer_email);
 
-      // Prefill OnPay (kalau form OnPay support name, phone, email)
-      const redirectLink = `${validUser.onpay_link}?name=${name}&phone=${phone}&email=${email}`;
+const redirectLink = `${validUser.onpay_link}?client_fullname=${name}&client_phone_number=${phone}&client_email=${email}`;
 
-      // Redirect lepas 0.5 saat
-      setTimeout(() => {
-        window.location.href = redirectLink;
-      }, 500);
+setTimeout(() => {
+  window.location.href = redirectLink;
+}, 500);
     } else {
       errorMsg.style.color = 'red';
       errorMsg.textContent = 'Username / Password Invalid!';
