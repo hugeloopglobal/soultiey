@@ -17,7 +17,7 @@ const users = [
 	  const inputPass = document.getElementById('password').value.trim();
 	
 	  // Cari user yang matching
-	  const validUser = users.find(user =&gt; user.username === inputUser &amp;&amp; user.password === inputPass);
+	  const validUser = users.find(user => user.username === inputUser && user.password === inputPass);
 	
 	  if (validUser) {
 	    alert(`Login berjaya sebagai ${validUser.level}!`);
