@@ -1,3 +1,11 @@
+ const users = [
+      { username: 'mayawilianti', password: '890324145140', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
+      { username: 'zarinarusli', password: 'vip456', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
+      { username: 'sitihajar', password: 'agent123', level: 'LADY MILLION', link: 'https://www.wanitasoultiey.com/order/form/ladymillions' },
+      { username: 'agentleader', password: 'agent456', level: 'AGENT', link: 'https://onpay.my/agent-order' },
+      { username: 'customer1', password: 'cust123', level: 'CUSTOMER', link: 'https://onpay.my/customer-order' },
+      { username: 'customer2', password: 'cust456', level: 'CUSTOMER', link: 'https://onpay.my/customer-order' }
+    ];
 
     const form = document.getElementById('loginForm');
     const errorMsg = document.getElementById('errorMsg');
@@ -11,13 +19,14 @@
 
       if (validUser) {
         errorMsg.style.color = 'green';
-        errorMsg.textContent = `Login berjaya sebagai ${validUser.level}! Sedang redirect...`;
+        errorMsg.textContent = `Login berjaya sebagai ${validUser.level}! Link dibuka...`;
 
-        // Redirect selepas 1 saat
-          setTimeout(() => {
-    window.open(validUser.link, "_blank"); // Buka tab baru (confirm jalan)
-  }, 1000);
-} else {
+        // Force buka link tab baru (bypass sandbox)
+        setTimeout(() => {
+          window.open(validUser.link, "_blank");
+        }, 500);
+
+      } else {
         errorMsg.style.color = 'red';
         errorMsg.textContent = 'Username / Password Invalid!';
       }
